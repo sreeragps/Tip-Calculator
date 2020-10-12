@@ -12,12 +12,15 @@ namespace razor.Pages
     {
         public double _tip;
         private double tip2;
-        public double Tip{
-            get{
+        public double Tip
+        {
+            get
+            {
                 return tip2;
             }
-            set{
-                tip2=value;
+            set
+            {
+                tip2 = value;
             }
         }
 
@@ -34,13 +37,13 @@ namespace razor.Pages
         }
         public void OnPost()
         {
-            double amount=double.Parse(Request.Form["amount"]);
-            double tip=double.Parse(Request.Form["tip"]);
-            int number=Int32.Parse(Request.Form["no"]);
-            double tipPerPerson=(amount*tip)/(100*number);
-            ViewData["tipPerson"]=tipPerPerson;
-            _tip=tipPerPerson;
-            Tip=tipPerPerson;
+            double amount = double.Parse(Request.Form["amount"]);
+            double tip = double.Parse(Request.Form["tip"]);
+            int number = Int32.Parse(Request.Form["no"]);
+            double tipPerPerson = (amount * tip) / (100 * number);
+            ViewData["tipPerson"] = tipPerPerson;
+            _tip = tipPerPerson;
+            Tip = tipPerPerson;
 
 
         }
