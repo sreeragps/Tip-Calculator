@@ -1,0 +1,20 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "TIP CALCULATOR";
+}
+
+<div class="text-center">
+   <form method="POST">
+       <label for="BillAmount">Enter Bill AmountL:</label>
+       <input type="text" name="amount">
+       <label for="tip">Percentage Tip:</label>
+       <input type="text" name="tip"><br><br>
+       <label for="People">No of People</label>
+       <input type="text" name="no"><br><br>
+       <input type="submit" value="Submit">
+       <label >Tip for One Person is:@ViewData["tipPerson"]</label><br>
+       <label >Tip for One Person using model:@Model._tip</label><br>
+       <label >Tip for One Person using model & Property:@Model.Tip</label>
+   </form>
+</div>
